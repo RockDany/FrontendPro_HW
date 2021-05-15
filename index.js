@@ -1,37 +1,48 @@
 //Задание 1
-const MyArray = [];
+let MyArray = [];
 
-/*
-# - спрашиваем у пользователя 2 операнда (2 промта).*/
-const name2 =prompt('Твоё имя', "Name");
-const tally = prompt('Сколько тебе лет?', 19);
-const bigNumber= prompt('Напиши ...n число', 25);
-const discreteLogic = prompt('Напиши true или false', true);
-const space = prompt('Ничего не пиши!!!');
-const unknown = prompt('Нажми отмена!!!');
-const student = prompt('Создаем Объект Студент','Артём');
-const ip= prompt('Cоздаем  наш Символ','E3');
+let famyly =String(prompt('Твоё имя', "Name"));
+let  tally = Number(prompt('Сколько тебе лет?', 19));
+let  bigNumber= BigInt(prompt('Напиши n число', 200109082001090820010));
+let  discreteLogic = Boolean(prompt('Напиши true или false', true));
+let  ip= Symbol (prompt('Cоздаем  наш Символ','*'));
+let  unknown; prompt('Пиши что хочешь!!!');
 
+
+let  space = prompt('Нажми отмена!!!',''); 
 
 
 
-const comand = prompt('Команда для преобразования типов -"conversion"', "conversion" )
-
-
-function conversion(name2,tally,bigNumber,discreteLogic,space,unknown,student,ip){
-  MyArray.push(name2, Number(tally),BigInt(bigNumber) ,Boolean(discreteLogic), space, unknown,Object(student), Symbol(ip));
-}
-
-if(comand === 'conversion')
-{conversion(name2,tally,bigNumber,discreteLogic,space,unknown,student,ip)}
-
-
-
-for(i=0;i<=MyArray.length - 1;i++)
+let  student = 
 {
-  console.log(MyArray[i] + ' ' + typeof MyArray[i]);
+	student_name: prompt('Создаем Объект Студент-имя','Артём'),
+	student_group: prompt('Создаем Объект Студенгруппа','ІТІНФ-19-3')
+};
 
+
+
+alert('Твоё имя ' + famyly +' тебе ' + tally + ' лет'  )
+alert('Твоё имя ' + student.student_name + ' ты учишься в группе ' + student.student_group )
+
+MyArray.push(famyly,tally,bigNumber,discreteLogic,space,unknown,student,ip);
+//Проверка на тип моих данных
+	console.log(MyArray);
+	console.log(typeof famyly)
+	console.log(typeof tally)
+	console.log(typeof bigNumber)
+	console.log(typeof discreteLogic)
+	console.log(typeof space)
+	console.log(typeof unknown)
+	console.log(typeof student)
+	console.log(typeof ip)
+
+//Попробовал работу с циклами 
+for( let i=0; i<=MyArray.length ; ++i)
+{
+  console.log(i+ '. ' +MyArray[i] + ' ' + typeof MyArray[i]);
 }
+
+
 
 
 
